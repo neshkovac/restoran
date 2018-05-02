@@ -437,6 +437,7 @@ li.social-networks:hover{
 		.section-with-navbar .navbar-nav li.social-links-navbar{
 			padding-left: 50px;
 
+<<<<<<< Updated upstream
 		}
 		.navbar-default .navbar-toggle:focus{
 			background-color: transparent;
@@ -468,4 +469,36 @@ li.social-networks:hover{
 		/* adasasdas */
 	}	
 }
+=======
+	}
+	.navbar-default .navbar-toggle:focus{
+		background-color: transparent;
+	}
+	.navbar-default .navbar-toggle:active{
+		background-color: transparent;
+	}
+	.navbar-default .navbar-toggle:hover{
+		background-color: transparent;
+	}
+	.section-form p.description-paragraph{
+		padding: 0 15px;
+	}
+	.navbar-header a.navbar-brand img{
+		height: 35px;
+	}
+	.section-menu div.last-on-menu:not(.last-on-entire-menu){
+		padding-bottom: 0px;
+	}
+	.section-menu h2.heading-orange-2{
+		padding-top: 100px;
+	}
+	.section-menu .last-on-entire-menu{
+		padding-bottom: 150px;
+	}
+	.section-form .form-group{
+		text-align: center;
+	}
+	/* adasasdas */
+}	
+>>>>>>> Stashed changes
 /* 	                                                           Responsive za LG+                               */
