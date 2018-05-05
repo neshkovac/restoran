@@ -93,15 +93,13 @@
 }
 
 .section-with-navbar {
-  background-image: url('../img/header-background.jpg');
+  background: url('../img/header-background.jpg') no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .section-just-the-right-food {
-  background-image: url('../img/section-menu-background.jpg');
+  background: url('../img/section-menu-background.jpg') no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .heading-orange {
@@ -125,14 +123,13 @@
   font-size: 90px;
   color: #fff;
   font-family: 'Yeseva One', 'Arial', serif;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   font-weight: normal;
 }
 
 .section-fine-ingredients {
-  background-image: url('../img/section-fine-ingredients-background.jpg');
+  background: url('../img/section-fine-ingredients-background.jpg') no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .opacity-background {
@@ -145,15 +142,13 @@
 }
 
 .section-menu {
-  background-image: url('../img/section-menu-background.jpg');
+  background: url('../img/section-menu-background.jpg') no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .section-guest-reviews {
-  background-image: url('../img/guest-reviews-background.jpg');
+  background: url('../img/guest-reviews-background.jpg') no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .section-with-navbar a.white-btn:hover {
@@ -167,9 +162,9 @@
   background-color: rgba(255, 255, 255, 0.196);
   font-size: 18px;
   border: 1px solid #fff;
-  border-radius: 0px;
-  line-height: 0px;
-  letter-spacing: 0px;
+  border-radius: 0;
+  line-height: 0;
+  letter-spacing: 0;
   color: #fff;
   transition: background-color 0.5s linear;
 }
@@ -184,9 +179,9 @@
   background-color: rgba(0, 0, 0, 0.56);
   font-size: 18px;
   border: 1px solid black;
-  border-radius: 0px;
-  line-height: 0px;
-  letter-spacing: 0px;
+  border-radius: 0;
+  line-height: 0;
+  letter-spacing: 0;
   color: #fff;
   transition: background-color 0.3s ease-in-out;
 }
@@ -250,7 +245,7 @@
 }
 
 .section-menu .bordered-row {
-  border-bottom: 0.5px solid #dab33e;
+  border-bottom: 1px solid #dab33e;
   margin-left: 2px;
   margin-right: 2px;
 }
@@ -261,8 +256,8 @@
 }
 
 .section-menu .non-bordered-row div {
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .section-menu .special {
@@ -284,8 +279,8 @@
 }
 
 .menu-item {
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .heading-padding-top {
@@ -354,8 +349,8 @@ p.guest-paragraph:before {
 }
 
 .section-form h2.heading-orange {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .section-form p.description-paragraph {
@@ -389,12 +384,11 @@ h5.item-description {
 .section-form a.btn-form {
   padding-left: 50px;
   padding-right: 50px;
-  border-radius: 0px;
+  border-radius: 0;
   background-color: #c89f2d;
   color: #fff;
   margin-top: 39px;
-  transition: background-color 0.35s ease-in-out;
-  transition: color 0.35s ease-in-out;
+  transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
 }
 
 .section-form a.btn-form:hover {
@@ -426,7 +420,7 @@ h5.item-description {
 }
 
 .footer ul {
-  padding-left: 0px;
+  padding-left: 0;
   text-align: center;
 }
 
@@ -436,7 +430,7 @@ h5.item-description {
 }
 
 .footer ul li.credit-cards {
-  padding-top: 0px;
+  padding-top: 0;
 }
 
 .footer ul li.credit-cards:not(:last-child) {
@@ -453,7 +447,7 @@ h5.item-description {
 }
 
 li.credit-cards {
-  -webkit transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 li.credit-cards:hover {
@@ -461,11 +455,15 @@ li.credit-cards:hover {
 }
 
 li.social-networks {
-  -webkit transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 li.social-networks:hover {
   transform: scale(1.2);
+}
+
+.navbar-toggle  {
+  margin-top: 20px;
 }
 
 /* 																Responsive 										*/
@@ -496,16 +494,21 @@ li.social-networks:hover {
   }
 }
 @media screen and (max-width: 1200px) and (min-width: 992px){
-  .section-with-navbar div.navbar-header a.navbar-brand img{
-    height: 70px;
-    margin-left: -15px;
-  }
   .section-with-navbar h1.heading-ingredients{
     font-size: 48px;
   }
+
+  .navbar-brand {
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .navbar-brand img {
+    max-width: 105px;
+  }
 }
 /* 	                                                           Responsive za MD                                */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .nav li a{
     padding: 15px 5px;
   }
@@ -521,6 +524,7 @@ li.social-networks:hover {
   .navbar-brand {
     float: left;
     height: auto;
+    padding: 20px 15px;
   }
   .navbar-collapse {
     border: none;
@@ -551,7 +555,7 @@ li.social-networks:hover {
     padding: 0 15px;
   }
   .section-menu div.last-on-menu:not(.last-on-entire-menu) {
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
   .section-menu h2.heading-orange-2 {
     padding-top: 100px;
@@ -570,15 +574,3 @@ li.social-networks:hover {
     width: 50%;
   }
 }*/
-@media screen and (min-width: 992px){
-  .navbar-nav {
-    float: left;
-    margin: 0;
-  }
-}
-@media screen and (max-width: 991px){
-  .navbar-nav {
-    float: none;
-    margin: 0;
-  }
-}
