@@ -217,6 +217,7 @@
 .section-just-the-right-food img.just-the-right-food-dish {
     padding-top: 54px;
     padding-bottom: 31px;
+    margin: 0 auto;
 }
 
 .section-just-the-right-food img.just-the-right-food-round {
@@ -359,6 +360,7 @@ p.guest-paragraph:before {
 
 h5.item-description {
     color: #4c4c4c;
+    padding: 0 15px;
 }
 
 .section-form label {
