@@ -1,7 +1,10 @@
-$(document).ready(function () {
-    animateScroll();
-});
+// prvo promenjive dohvatamo pa tek onda radimo funkcije.
+var $html = $('html, body');
+var $bttButton = $('#back-to-top');
+var $topOfThePage = $('#Home');
+var $navbar = $('#navbar-fixed-top');
 
+// onda funkcije
 function animateScroll() {
     $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function (event) {
         // On-page links
@@ -13,7 +16,7 @@ function animateScroll() {
             if (target.length) {
                 // Only prevent default if animation is actually gonna happen
                 event.preventDefault();
-                $('html, body').animate({
+                $html.animate({
                     scrollTop: target.offset().top
                 }, 1000, function () {
                     // Callback after animation
@@ -31,3 +34,53 @@ function animateScroll() {
         }
     });
 }
+
+// When the user clicks on the button, scroll to the top of the document
+function backToTopOnClick() {
+    $bttButton.on('click', function() {
+        $html.animate({
+            scrollTop: $topOfThePage.offset().top
+        }, 1000);
+    });
+}
+
+
+function onScroll() {
+    var scrolled = document.body.scrollTop;
+    /* Navbar JS */
+    if (window.matchMedia("(max-width: 1000px)").matches) {
+        if (scrolled >= 20) {
+            $navbar.addClass('navbar-bg-orange');
+        } else {
+            $navbar.removeClass('navbar-bg-orange');
+        }
+    } else {
+        if (scrolled >= 200) {
+            $navbar.addClass('navbar-bg-orange');
+        } else {
+            $navbar.removeClass('navbar-bg-orange');
+        }
+    }
+
+    if (scrolled > 230 || scrolled > 230) {
+        $bttButton.addClass('opacity-btn')
+    } else {
+        $bttButton.removeClass('opacity-btn');
+    }
+}
+
+
+
+// na kraju eventove....
+// ready znaci da je dokument ucitaj i spreman za script
+
+
+
+window.addEventListener('load', function () {
+    backToTopOnClick();
+    animateScroll();
+});
+
+window.addEventListener('scroll', function() {
+    onScroll();
+});

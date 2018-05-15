@@ -12,15 +12,21 @@
 	<link rel="stylesheet" type="text/css" href="style/main.css">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="@adactio">
-	<meta name="twitter:url" property="og:url" content="https://Lambda/index.html">
-	<meta name="twitter:title" property="og:title" content="Restaurant">
+	<meta name="twitter:url" property="og:url" content="www.Lambda.rs">
+	<meta name="twitter:title" property="og:title" content="Restaurant | Lambda">
 	<meta name="twitter:description" property="og:description" content="Pick your plate!">
 	<meta name="twitter:image" property="og:image" content="#">
+	<meta property="og:title" content="Restaurant | Lambda" />
+	<meta property="og:type" content="website" />
+	<!-- Do we need CURIE here? my namespace etc. ? -->
+	<meta property="og:image" content="#" />
+	<meta property="og:url" content="www.Lambda.rs" />
+	<meta property="og:description" content="Pick your plate!" />
 	<title>Lambda</title>
 </head>
 <body data-spy="scroll" data-target="#scrollspy-nav" data-offset="50">
-	<section id="Home" class="section-with-navbar">
-		<nav class="navbar navbar-default" itemscope itemtype=" http://schema.org/SiteNavigationElement">
+	<section id="Home" class="section-with-navbar nav-padding-2">
+		<nav class="navbar-fixed-top navbar-default" itemscope itemtype=" http://schema.org/SiteNavigationElement" id="navbar-fixed-top">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -74,7 +80,12 @@
 			<!-- Row with 2 buttons -->
 		</div>
 	</section>
-	<section class="section-just-the-right-food" >
+	<div class="back-to-top">
+		<button type="button" class="btn" id="back-to-top">
+			<span class="glyphicon glyphicon-menu-up"></span>
+		</button>
+	</div>
+	<section class="section-just-the-right-food nav-padding">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1" itemscope itemtype="http://schema.org/WebPageElement">
@@ -105,7 +116,7 @@
 		<!--container section 2 -->
 	</section>
 	<!-- Section with plate bckg -->
-	<section class="section-fine-ingredients" id="Ingredients">
+	<section class="section-fine-ingredients nav-padding" id="Ingredients">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-6 col-md-offset-6 col-lg-6 col-lg-offset-6" itemscope itemtype="http://schema.org/WebPageElement">
@@ -146,7 +157,7 @@
 		<!--Section fine igredients container-->
 	</section>
 	<!--Fine ingredients section ends-->
-	<section class="section-menu" id="Menu">
+	<section class="section-menu nav-padding" id="Menu">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-5 col-lg-4" itemscope itemtype="http://schema.org/WebPageElement">
@@ -359,7 +370,7 @@
 		<!--Section menu container-->
 	</section>
 	<!--Menu section ends-->
-	<section class="section-guest-reviews" id="Guest">
+	<section class="section-guest-reviews nav-padding" id="Guest">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12" itemscope itemtype="http://schema.org/WebPageElement">
@@ -390,7 +401,7 @@
 	<!--guest-reviews container ends-->
 </section>
 <!--Section guest review ends-->
-<section class="section-form" id="Reservations">
+<section class="section-form nav-padding" id="Reservations">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12" itemscope itemtype="http://schema.org/WebPageElement">
