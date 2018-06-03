@@ -41,6 +41,9 @@
 .section-with-navbar .navbar .navbar-nav li a:hover {
     color: #fff;
 }
+.section-with-navbar .navbar-default .navbar-nav li a:hover{
+    color: #fff;
+}
 
 .back-to-top{
     position: fixed;
