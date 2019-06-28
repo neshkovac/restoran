@@ -1,0 +1,696 @@
+<html>
+
+<head>
+	<meta http-equiv="Content Type" type="text/html" charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='shortcut icon' type='image/x-icon' href="img/favIconPhoto.png">
+	<link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:700" rel="stylesheet">
+	<!-- font-family: 'Gentium Book Basic', serif; -->
+	<link href="https://fonts.googleapis.com/css?family=Yeseva+One" rel="stylesheet">
+	<!-- font-family: 'Yeseva One', cursive; -->
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@adactio">
+	<meta name="twitter:url" property="og:url" content="www.Lambda.rs">
+	<meta name="twitter:title" property="og:title" content="Restaurant | Lambda">
+	<meta name="twitter:description" property="og:description" content="Pick your plate!">
+	<meta name="twitter:image" property="og:image" content="#">
+	<meta property="og:title" content="Restaurant | Lambda" />
+	<meta property="og:type" content="website" />
+	<!-- Do we need CURIE here? my namespace etc. ? -->
+	<meta property="og:image" content="#" />
+	<meta property="og:url" content="www.Lambda.rs" />
+	<meta property="og:description" content="Pick your plate!" />
+	<title>Lambda</title>
+</head>
+
+<body data-spy="scroll" data-target="#scrollspy-nav">
+	<section id="home" class="section-with-navbar nav-padding-2">
+		<nav class="navbar-fixed-top navbar-default" itemscope itemtype=" http://schema.org/SiteNavigationElement"
+			id="navbar-fixed-top">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#home"><img class="img-responsive" src="img/restaurant-logo.png"
+							alt="logo" /></a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse right" id="bs-example-navbar-collapse-1">
+					<div id="scrollspy-nav" class="clearfix">
+						<ul class="nav navbar-nav text-right" itemscope itemtype="http://schema.org/BreadcrumbList">
+							<li class="navbar-links active" itemprop="itemListElement" itemscope
+								itemtype="http://schema.org/ListItem"><a href="#home" itemprop="item">Home<span
+										class="sr-only">(current)</span></a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="navbar-links" itemprop="itemListElement" itemscope
+								itemtype="http://schema.org/ListItem"><a href="#ingredients"
+									itemprop="item">Igredients</a>
+								<meta itemprop="position" content="2" />
+							</li>
+							<li class="navbar-links" itemprop="itemListElement" itemscope
+								itemtype="http://schema.org/ListItem"><a href="#menu" itemprop="item">Menu</a>
+								<meta itemprop="position" content="3" />
+							</li>
+							<li class="navbar-links" itemprop="itemListElement" itemscope
+								itemtype="http://schema.org/ListItem"><a href="#guest" itemprop="item">Reviews</a>
+								<meta itemprop="position" content="4" />
+							</li>
+							<li class="navbar-links" itemprop="itemListElement" itemscope
+								itemtype="http://schema.org/ListItem"><a href="#reservations"
+									itemprop="item">Reservations</a>
+								<meta itemprop="position" content="5" />
+							</li>
+							<li class="navbar-links" itemprop="itemListElement" itemscope
+								itemtype="http://schema.org/ListItem"><a href="#about">About</a>
+								<meta itemprop="position" content="6" />
+							</li>
+							<li class="social-links-navbar"><a href="https://www.twitter.com" itemprop="url"
+									target="_blank"><img itemtype="thing" itemprop="image"
+										src="img/social-twitter-orange.png" alt="twitter" /></a></li>
+							<li class="social-links-navbar"><a href="https://www.youtube.com" itemprop="url"
+									target="_blank"><img itemtype="thing" itemprop="image"
+										src="img/social-yt-orange.png" alt="youtube" /></a></li>
+							<li class="social-links-navbar"><a href="https://www.facebook.com" itemprop="url"
+									target="_blank"><img itemtype="thing" itemprop="image"
+										src="img/social-facebook-orange.png" alt="facebook" /></a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- container -->
+		</nav>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1" itemscope
+					itemtype="http://schema.org/WPHeader">
+					<h1 class="text-center heading-ingredients">the right ingredients for the right food</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-md-12 col-lg-12">
+					<img class="decoration-white img-responsive" src="img/pattern-decoration-white.png"
+						alt="white-decor" />
+				</div>
+			</div>
+			<div class="row" id="#buttons-nav">
+				<div
+					class="col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-3 col-lg-3 col-lg-offset-3 text-right">
+					<a href="#reservations" class="btn btn-default black-btn" id="bookATableBtn">book a table</a>
+				</div>
+				<div class="col-sm-8 col-sm-offset-2 col-lg-offset-0 col-md-3 col-lg-3 text-left">
+					<a href="#menu" class="btn btn-default white-btn" id="seeTheMenuBtn">see the menu</a>
+				</div>
+			</div>
+			<!-- Row with 2 buttons -->
+		</div>
+	</section>
+	<div class="back-to-top">
+		<button type="button" class="btn" id="back-to-top">
+			<span class="glyphicon glyphicon-menu-up"></span>
+		</button>
+	</div>
+	<section class="section-just-the-right-food nav-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1" itemscope
+					itemtype="http://schema.org/WebPageElement">
+					<div class="row">
+						<div class="col-xs-12 col-md-12 col-lg-12">
+							<h2 class="menu-heading heading-orange just-the-right-food-heading text-center"
+								itemtype="thing" itemprop="name">Just
+								the right food</h2>
+							<img itemtype="thing" itemprop="image" class="decoration-orange img-responsive"
+								src="img/pattern-decoration-orange.png" alt="decoration-white" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-md-12 col-lg-12">
+							<p class="text-center just-the-right-food-paragraph" itemtype="thing"
+								itemprop="description">If you've been to
+								one of our restaurants, you've seen - and tasted - what keeps our customers coming back
+								for more.Perfect
+								materials and freshly baked food, delicious Lambda cakes, muffins, and gourmet coffees
+								make us hard to resist!
+								Stop in today
+								and check us out!</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2 text-center">
+							<img class="just-the-right-food-round img-responsive"
+								src="img/just-the-right-food-round.png" alt="section-2-photo" itemtype="thing"
+								itemprop="image" />
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-7 col-lg-5 col-lg-offset-1">
+					<img class="just-the-right-food-dish img-responsive" src="img/dish.png" alt="fotka-tanjir"
+						itemtype="thing" itemprop="image" />
+				</div>
+			</div>
+			<!--Row section 2-->
+		</div>
+		<!--container section 2 -->
+	</section>
+	<!-- Section with plate bckg -->
+	<section class="section-fine-ingredients nav-padding" id="ingredients">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-12 col-lg-offset-6 col-lg-6" itemscope itemtype="http://schema.org/WebPageElement">
+					<div class="opacity-background">
+						<div class="row">
+							<div class="col-xs-12 col-md-offset-1 col-md-10 text-center">
+								<h2 class="menu-heading heading-" itemtype="thing" itemprop="name">Fine ingredients</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-md-12 text-center">
+								<img class="decoration-white" src="img/pattern-decoration-white-2.png" alt="decor"
+									itemtype="thing" itemprop="image" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+								<p class="description-paragraph text-center" itemtype="thing" itemprop="description">If
+									you've been to one of
+									our restaurants, you've seen - and tasted - what keeps our customers coming back for
+									more.Perfect materials
+									and freshly baked food, delicious Lambda cakes, muffins, and gourmet coffees make us
+									hard to resist! Stop in
+									today
+									and check us out!</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-10 col-xs-offset-1 col-md-10 col-lg-8 col-lg-offset-2 col-md-offset-1 fine-ingredients-img-wrapper">
+								<div class="row">
+									<div class="col-xs-4 col-md-4 col-lg-4 text-center"><img
+											class="fine-ingredients-round" src="img/fine-ingredients-round1.png"
+											alt="okrugla" itemtype="thing" itemprop="image">
+									</div>
+									<div class="col-xs-4 col-md-4 col-lg-4 text-center"><img
+											class="fine-ingredients-round" src="img/fine-ingredients-round2.png"
+											alt="okrugla" itemtype="thing" itemprop="image">
+									</div>
+									<div class="col-xs-4 col-md-4 col-lg-4 text-center"><img
+											class="fine-ingredients-round" src="img/fine-ingredients-round3.png"
+											alt="orkugla" itemtype="thing" itemprop="image">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Fine ingredients row end-->
+		</div>
+		<!--Section fine igredients container-->
+	</section>
+	<!--Fine ingredients section ends-->
+	<section class="section-menu nav-padding" id="menu">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-5 col-lg-4" itemscope
+					itemtype="http://schema.org/WebPageElement">
+					<div class="row">
+						<div class="col-xs-12 col-md-12 col-lg-12" itemscope itemtype="http://schema.org/Product">
+							<h2 class="menu-heading heading-orange text-center heading-padding-top" itemtype="thing"
+								itemprop="name">Appetisers</h2>
+							<img class="decoration-orange img-responsive" src="img/pattern-decoration-orange.png"
+								alt="decoration-orange" itemtype="thing" itemprop="image" />
+							<div class="row bordered-row clearfix">
+								<div class="col-xs-6 col-md-8 col-lg-8 menu-item-title">
+									<h3 class="item-name" itemtype="thing" itemprop="name">Tzatsiki</h3>
+								</div>
+								<div class="col-xs-6 col-md-4 col-lg-4 menu-item-right">
+									<h3 class="item-price text-right"><span itemprop="priceCurrency content="
+											USD">$</span><span itemprop="price
+										 content=" 3.99">3.99</span></h3>
+								</div>
+							</div>
+							<div class="row non-bordered-row">
+								<div class="col-xs-12 col-md-12 col-lg-12">
+									<h5 class="item-description" itemtype="thing" itemprop="description">Refreshing
+										traditional cucumber and
+										garlic yoghurt dip.</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-12 col-lg-12" itemscope itemtype="http://schema.org/Product">
+							<div class="row bordered-row">
+								<div class="col-xs-6 col-md-8 col-lg-8 menu-item-title">
+									<h3 class="item-name" itemtype="thing" itemprop="name">Aubergine salad</h3>
+								</div>
+								<div class="col-xs-6 col-md-4 col-lg-4 menu-item-right">
+									<h3 class="item-price text-right"><span itemprop="priceCurrency content="
+											USD">$</span><span itemprop="price
+										 content=" 5.50">5.50</span></h3>
+								</div>
+							</div>
+							<div class="non-bordered-row">
+								<div class="col-xs-12 col-md-12 col-lg-12">
+									<h5 class="item-description" itemtype="thing" itemprop="description">Pureed
+										eggplant, garlic, green pepper and
+										tomato dip.</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-12 col-lg-12" itemscope itemtype="http://schema.org/Product">
+							<div class="row bordered-row">
+								<div class="col-xs-6 col-md-8 col-lg-8 menu-item-title">
+									<h3 class="item-name" itemtype="thing" itemprop="name">Panzenella</h3>
+								</div>
+								<div class="col-xs-6 col-md-4 col-lg-4 menu-item-right">
+									<h3 class="item-price text-right"><span itemprop="priceCurrency content="
+											USD">$</span><span itemprop="price
+										 content=" 5.25">5.25</span></h3>
+								</div>
+							</div>
+							<div class="row non-bordered-row last-on-menu-2">
+								<div class="col-xs-12 col-md-12 col-lg-12">
+									<h5 class="item-description" itemtype="thing" itemprop="description">Pureed
+										eggplant, garlic, green pepper and
+										tomato dip.</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-md-12 col-lg-12" itemscope itemtype="http://schema.org/Product">
+							<h2 class="menu-heading heading-orange heading-orange-2 text-center">Salads</h2>
+							<img class="decoration-orange img-responsive" src="img/pattern-decoration-orange.png"
+								alt="decoration-orange" />
+							<div class="row bordered-row">
+								<div class="col-xs-6 col-md-8 col-lg-8 menu-item-title">
+									<h3 class="item-name" itemtype="thing" itemprop="name"> Watermelon, Olive and Feta
+										Salad</h3>
+								</div>
+								<div class="col-xs-6 col-md-4 col-lg-4 menu-item-right">
+									<h3 class="item-price text-right"><span itemprop="priceCurrency content="
+											USD">$</span><span itemprop="price
+										 content=" 6.25">6.25</span></h3>
+								</div>
+							</div>
+							<div class="row non-bordered-row above-special">
+								<div class="col-xs-12 col-md-12 col-lg-12">
+									<h5 class="item-description" itemtype="thing" itemprop="description">Lorem ipsum
+										dolor sit amet.</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-12 col-lg-12" itemscope itemtype="http://schema.org/Product">
+							<div class="special">
+								<div class="row bordered-row">
+									<div class="col-xs-6 col-md-8 col-lg-8 menu-item-title">
+										<h3 class="item-name" itemtype="thing" itemprop="name">BBQ Potato Salad</h3>
+									</div>
+									<div class="col-xs-6 col-md-4 col-lg-4 menu-item-right">
+										<h3 class="item-price text-right"><span itemprop="priceCurrency content="
+												USD">$</span><span itemprop="price
+											 content=" 7.00">7.00</span></h3>
+									</div>
+								</div>
+								<div class="row non-bordered-row">
+									<div class="col-xs-12 col-md-12 col-lg-12">
+										<h5 class="item-description" itemtype="thing" itemprop="description">Lorem ipsum
+											dolor sit amet.</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-12 col-lg-12" itemscope itemtype="http://schema.org/Product">
+							<div class="row bordered-row">
+								<div class="col-xs-6 col-md-8 col-lg-8 menu-item-title">
+									<h3 class="item-name" itemtype="thing" itemprop="name">Carrot Salad with Black Grape
+										Dressing
+									</h3>
+								</div>
+								<div class="col-xs-6 col-md-4 col-lg-4 menu-item-right">
+									<h3 class="item-price text-right"><span itemprop="priceCurrency content="
+											USD">$</span><span itemprop="price
+										 content=" 8.25">8.25</span></h3>
+								</div>
+							</div>
+							<div class="row non-bordered-row last-on-menu">
+								<div class="col-xs-12 col-md-12 col-lg-12">
+									<h5 class="item-description" itemtype="thing" itemprop="description">Lorem ipsum
+										dolor sit amet.</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 col-lg-offset-2 starters">
+					<div class="row">
+						<div class="col-xs-12 col-md-12 col-lg-12" itemscope itemtype="http://schema.org/Product">
+							<h2 class="menu-heading heading-orange text-center heading-padding-top">Starters</h2>
+							<img class="decoration-orange img-responsive" src="img/pattern-decoration-orange.png"
+								alt="decoration-orange" />
+							<div class="row bordered-row">
+								<div class="col-xs-6 col-md-8 col-lg-8 menu-item-title">
+									<h3 class="item-name" itemtype="thing" itemprop="name">Aloo and Dal ki Tikki</h3>
+								</div>
+								<div class="col-xs-6 col-md-4 col-lg-4 menu-item-right">
+									<h3 class="item-price text-right"><span itemprop="priceCurrency content="
+											USD">$</span><span itemprop="price
+										 content=" 11.00">11.00</span></h3>
+								</div>
+							</div>
+							<div class="row non-bordered-row">
+								<div class="col-xs-12 col-md-12 col-lg-12">
+									<h5 class="item-description" itemtype="thing" itemprop="description">Lorem ipsum
+										dolor sit amet.</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-12 col-lg-12" itemscope itemtype="http://schema.org/Product">
+							<div class="row bordered-row">
+								<div class="col-xs-6 col-md-8 col-lg-8 menu-item-title">
+									<h3 class="item-name" itemtype="thing" itemprop="name">Chicken Satay</h3>
+								</div>
+								<div class="col-xs-6 col-md-4 col-lg-4 menu-item-right">
+									<h3 class="item-price text-right"><span itemprop="priceCurrency content="
+											USD">$</span><span itemprop="price
+										 content=" 10.50">10.50</span></h3>
+								</div>
+							</div>
+							<div class="row non-bordered-row last-on-menu-2">
+								<div class="col-xs-12 col-md-12 col-lg-12">
+									<h5 class="item-description" itemtype="thing" itemprop="description">Lorem ipsum
+										dolor sit amet.</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-md-12 col-lg-12" itemscope itemtype="http://schema.org/Product">
+							<h2 class="menu-heading heading-orange heading-orange-2 text-center">Main Dishes</h2>
+							<img class="decoration-orange img-responsive" src="img/pattern-decoration-orange.png"
+								alt="decoration-orange" />
+							<div class="row bordered-row">
+								<div class="col-xs-6 col-md-8 col-lg-8 menu-item-title">
+									<h3 class="item-name" itemtype="thing" itemprop="name">Spicy root and lentil
+										casserole</h3>
+								</div>
+								<div class="col-xs-6 col-md-4 col-lg-4 menu-item-right">
+									<h3 class="item-price text-right"><span itemprop="priceCurrency content="
+											USD">$</span><span itemprop="price
+										 content=" 15.00">15.00</span></h3>
+								</div>
+							</div>
+							<div class="row non-bordered-row above-special">
+								<div class="col-xs-12 col-md-12 col-lg-12">
+									<h5 class="item-description" itemtype="thing" itemprop="description">Lorem ipsum
+										dolor sit amet.</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-12 col-lg-12" itemscope itemtype="http://schema.org/Product">
+							<div class="special">
+								<div class="row bordered-row">
+									<div class="col-xs-6 col-md-8 col-lg-8 menu-item-title">
+										<h3 class="item-name" itemtype="thing" itemprop="name">Hearty pasta soup</h3>
+									</div>
+									<div class="col-xs-6 col-md-4 col-lg-4 menu-item-right">
+										<h3 class="item-price text-right"><span itemprop="priceCurrency content="
+												USD">$</span><span itemprop="price
+											 content=" 28.00">28.00</span></h3>
+									</div>
+								</div>
+								<div class="row non-bordered-row">
+									<div class="col-xs-12 col-md-12 col-lg-12">
+										<h5 class="item-description" itemtype="thing" itemprop="description">Lorem ipsum
+											dolor sit amet.</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-12 col-lg-12" itemscope itemtype="http://schema.org/Product">
+							<div class="row bordered-row">
+								<div class="col-xs-6 col-md-8 col-lg-8 menu-item-title">
+									<h3 class="item-name" itemtype="thing" itemprop="name">Crispy Greek-style pie</h3>
+								</div>
+								<div class="col-xs-6 col-md-4 col-lg-4 menu-item-right">
+									<h3 class="item-price text-right"><span itemprop="priceCurrency content="
+											USD">$</span><span itemprop="price
+										 content=" 25.00">25.00</span></h3>
+								</div>
+							</div>
+							<div class="row non-bordered-row">
+								<div class="col-xs-12 col-md-12 col-lg-12">
+									<h5 class="item-description" itemtype="thing" itemprop="description">Lorem ipsum
+										dolor sit amet.</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-12 col-lg-12" itemscope itemtype="http://schema.org/Product">
+							<div class="row bordered-row">
+								<div class="col-xs-6 col-md-8 col-lg-8 menu-item-title">
+									<h3 class="item-name" itemtype="thing" itemprop="name">Chicken and mushroom puff pie
+									</h3>
+								</div>
+								<div class="col-xs-6 col-md-4 col-lg-4 menu-item-right">
+									<h3 class="item-price text-right"><span itemprop="priceCurrency content="
+											USD">$</span><span itemprop="price
+										 content=" 32.30">32.30</span></h3>
+								</div>
+							</div>
+							<div class="row non-bordered-row last-on-menu last-on-entire-menu">
+								<div class="col-xs-12 col-md-12 col-lg-12">
+									<h5 class="item-description" itemtype="thing" itemprop="description">Lorem ipsum
+										dolor sit amet.</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Section Menu row end-->
+		</div>
+		<!--Section menu container-->
+	</section>
+	<!--Menu section ends-->
+	<section class="section-guest-reviews nav-padding" id="guest">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12" itemscope itemtype="http://schema.org/WebPageElement">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 opacity-background">
+						<div class="row">
+							<div class="col-xs-12 col-md-12 col-lg-12">
+								<h2 class="guest-heading heading-white text-center" itemtype="thing" itemprop="name">
+									Guest reviews</h2>
+								<img class="decoration-wihte img-responsive" src="img/pattern-decoration-white-2.png"
+									alt="pattern-white" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+								<p class="guest-paragraph text-center" itemtype="thing" itemprop="description">If you've
+									been to one of our
+									restaurants, you've seen - and tasted - what keeps our customers coming back for
+									more.Perfect materials and
+									freshly baked food, delicious Lambda cakes, muffins, and gourmet coffees make us
+									hard to resist! Stop in today
+									and check us out!</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-md-12 col-lg-12">
+								<h5 class="guest-signature text-center">- food inc, New York</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--guest reviews row ends-->
+		</div>
+		<!--guest-reviews container ends-->
+	</section>
+	<!--Section guest review ends-->
+	<section class="section-form nav-padding" id="reservations">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12" itemscope itemtype="http://schema.org/WebPageElement">
+					<div class="col-xs-6 col-md-5 col-md-offset-1 col-lg-3">
+						<img class="section-form-img img-responsive" src="img/forn-picture1.jpg" alt="img1"
+							itemtype="thing" itemprop="image" />
+					</div>
+					<div class="col-xs-6 col-md-5 col-lg-3">
+						<img class="section-form-img img-responsive" src="img/form-picture2.jpg" alt="img1"
+							itemtype="thing" itemprop="image" />
+					</div>
+					<div class="col-xs-12 col-md-12 col-lg-4 col-lg-offset-1">
+						<div class="row">
+							<div class="col-xs-12 col-md-12">
+								<h2 class="heading-orange heading-orange-3 text-center" itemtype="thing"
+									itemprop="name">Just the right food</h2>
+								<img class="decoration-orange img-responsive" src="img/pattern-decoration-orange.png"
+									alt="orange-decoration" />
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-12">
+									<p class="description-paragraph text-center" itemtype="thing"
+										itemprop="description">If you've been to one of
+										our restaurants, you've seen - and tasted - what keeps our customers coming back
+										for more.Perfect materials
+										and freshly baked food</p>
+								</div>
+								<div class="col-xs-12 col-md-12">
+									<p class="description-paragraph text-center" itemtype="thing"
+										itemprop="description"> elicious Lambda cakes,
+										muffins, and gourmet coffees make us hard to resist! Stop in today and check us
+										out!</p>
+								</div>
+							</div>
+							<div class="row form-row">
+								<form class="col-xs-12" method="post" action="#">
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="col-sm-4 col-sm-offset-4 col-lg-12 col-lg-offset-0">
+												<div class="form-group row">
+													<label class="col-sm-12 col-md-12 col-form-label text-center"
+														for="name">Name</label>
+													<div class="col-sm-12 col-md-12">
+														<input type="text" placeholder="Capital 1st*" id="name"
+															class="form-control reset-margin" data-patern="[A-Z]\w+$">
+
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-4 col-sm-offset-4 col-lg-offset-0 col-lg-12">
+												<div class="form-group row">
+													<label for="email"
+														class="col-sm-12 col-md-12 col-form-label text-center">Email</label>
+													<div class="col-sm-12 col-md-12">
+														<input type="text" class="form-control" id="email"
+															placeholder="@.com*" data-patern="\w(\w|\d)+\@\w+\.com">
+
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-4 col-sm-offset-4 col-lg-offset-0 col-lg-12">
+												<div class="form-group row">
+													<label class="col-sm-12 col-md-12 col-form-label text-center"
+														for="date">Date</label>
+													<div class="col-sm-12 col-md-12">
+														<input type="text" placeholder="DD/MM/YYYY" id="date"
+															class="form-control" data-patern="([0-9]{2}\/){2}[0-9]{4}">
+
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-4 col-sm-offset-4 col-lg-offset-0 col-lg-12">
+												<div class="form-group row">
+													<label for="partyNumber"
+														class="col-sm-12 col-md-12 col-form-label text-center">Party
+														number</label>
+													<div class="col-sm-12 col-md-12">
+														<input type="text" class="form-control" id="partyNumber"
+															placeholder="*A20" data-patern="[A-Z]\d{2}">
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-lg-12 text-center form-button">
+									<button class="btn btn-default btn-form text-center" type="button" id="bookNow">Book
+										now!</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--form row ends-->
+			</div>
+			<!--form container ends-->
+		</div>
+	</section>
+	<!--section form ends-->
+	<footer class="footer" id="about">
+		<div class="container">
+			<div class="row footer-row" itemscope itemtype="http://schema.org/WPFooter">
+				<div class="col-xs-12 col-md-4 col-lg-4">
+					<h2 class="menu-heading heading-white text-center" itemtype="thing" itemprop="name">About us</h2>
+					<img class="img-responsive" src="img/pattern-decoration-white-2.png" alt="pattern-decoration-white"
+						itemtype="thing" itemprop="image" />
+					<p class="footer-paragraph text-center" itemtype="thing" itemprop="description">Lambda's new and
+						expanded Chelsea
+						location represents a truly authentic <strong>Greek</strong> patisserie, featuring breakfasts of
+						fresh croissants
+						and steaming bowls of cafe.Lambda the best restaurant in town</p>
+				</div>
+				<div class="col-xs-12 col-md-4 col-lg-2 col-lg-offset-1" itemscope itemtype="http://schema.org/Store">
+					<h2 class="menu-heading heading-white text-center" itemtype="thing" itemprop="name">Opening Hours
+					</h2>
+					<img itemtype="thing" itemprop="image" class="img-responsive"
+						src="img/pattern-decoration-white-2.png" alt="pattern-decoration-white" />
+					<meta itemprop="openingHours" content="Mo,Tu,We,Th 07:00-20:00">
+					<p class="footer-paragraph text-center"><strong>Mon-Thu:</strong><time datetime="07:00">
+							7:00am</time>-<time datetime="20:00">8.00pm</time></p>
+					<meta itemprop="openingHours" content="Fr,Sa,Su 07:00-22:00">
+					<p class="footer-paragraph text-center"><strong>Fri-Sun:</strong><time datetime="07:00">
+							7.00am</time>-<time datetime="22:00">10.00pm</time></p>
+					<ul class="footer-credit-cards">
+						<li class="credit-cards"><a itemprop="url" href="https://creditcards.com" target="_blank"><img
+									src="img/credit-card-american.png" alt="" class="credit-cards-img"></a></li>
+						<li class="credit-cards"><a itemprop="url" href="http://www.paypal.com" target="_blank"><img
+									src="img/credit-card-paypal.png" alt="" class="credit-cards-img"></a></li>
+						<li class="credit-cards"><a itemprop="url" href="https://www.mastercard.rs" target="_blank"><img
+									src="img/credit-card-mastercard.png" alt="" class="credit-cards-img"></a></li>
+						<li class="credit-cards"><a itemprop="url" href="https://rs.visa.com/" target="_blank"><img
+									src="img/credit-card-visa.png" alt="" class="credit-cards-img"></a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-md-4 col-lg-2 col-lg-offset-2" itemprop="address" itemscope
+					itemtype="http://schema.org/PostalAddress">
+					<h2 class="menu-heading heading-white text-center" itemtype="thing" itemprop="name">Our Location
+					</h2>
+					<img itemtype="thing" itemprop="image" class="img-responsive"
+						src="img/pattern-decoration-white-2.png" alt="pattern-decoration-white" />
+					<p class="footer-paragraph text-center" itemtype="thing" itemprop="description"><strong><span
+								itemprop="streetAddress">19th
+								Paradise Street Sitia</span></strong></p>
+					<p class="footer-paragraph text-center" itemtype="thing" itemprop="description"><strong><span
+								itemprop="streetAddress">128
+								Paradise Meserole Avenue</span></strong></p>
+					<ul class="footer-social">
+						<li class="social-networks"><a itemprop="url" href="https://www.facebook.com"
+								target="_blank"><img src="img/social-facebook.png" alt=""
+									class="social-networks-img"></a></li>
+						<li class="social-networks"><a itemprop="url" href="https://www.twitter.com"
+								target="_blank"><img src="img/social-twitter.png" alt=""
+									class="social-networks-img"></a></li>
+						<li class="social-networks"><a itemprop="url" href="https://www.instagram.com"
+								target="_blank"><img src="img/social-insta.png" alt="" class="social-networks-img"></a>
+						</li>
+						<li class="social-networks"><a itemprop="url" href="https://www.youtube.com"
+								target="_blank"><img src="img/social-yt.png" alt="" class="social-networks-img"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- Footer row ends-->
+		</div>
+		<!--Footer container ends-->
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+	<script src="js/main-bundle.js"></script>
+</body>
