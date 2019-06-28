@@ -1,49 +1,120 @@
-// prvo promenjive dohvatamo pa tek onda radimo funkcije.
 var $html = $('html, body');
 var $bttButton = $('#back-to-top');
 var $topOfThePage = $('#Home');
 var $navbar = $('#navbar-fixed-top');
+var $navLinksArr = $('li.navbar-links').toArray();
+var nameInput = document.querySelector('#name');
+var partyInput = document.querySelector('#partyNumber');
+var emailInput = document.querySelector('#email');
+var dateInput = document.querySelector('#date');
+var nameRegEx = /^[A-Z]\w+$/
+var emailRegEx = /^\w(\w|\d)+\@\w+\.com$/
+var dateRegEx = /^([0-9]{2}\/){2}[0-9]{4}$/
+var partyRegEx = /^[A-Z]\d{2}$/
+var bookNowButton = $('#bookNow');
+var fancyBoxSrcs = document.getElementsByClassName('fancyBoxGallery');
+var fancyBoxHrefs = document.getElementsByClassName('fancyBoxAnchor');
+var itemDescriptionArray = document.getElementsByClassName('item-description');
+var fancyBoxRow = document.querySelector('#fancyBoxRow');
+var formInputsArray = $('.form-control');
+var itemDescriptionValueArray = ["Refreshing traditional cucumber and garlic yoghurt dip.", "Pureed eggplant, garlic, green pepper and tomato dip.",
+    "Panzenella is a Tuscan bread salad, ideal for the summer months.", "The perfect summer salad of melon, olives and feta cheese with toasted pumpkin seeds.",
+    "The good old potato salad with a twist!", "A quick carrot salad with a freshly made black grape dressing", "Bite-sized and absolutely divine, serve these crisp potato and channa dal ki tikkis.",
+    "A Thai appetizer that’s downright delicious ", "The potatoes in this recipe take on the spicy flavours beautifully", "This filling soup is full of fibre, low fat and full of veg",
+    "A crispy pie that you can adapt for your needs, add chicken or keep it veggie.", "Served with creamy mashed potatoes"
+];
+// about author variables and other.
 
-// onda funkcije
+// end of about author variables and other.
+
+$('[data-fancybox="gallery"]').fancybox({
+    buttons: [
+        "zoom",
+        //"share",
+        "slideShow",
+        //"fullScreen",
+        //"download",
+        "thumbs",
+        "close"
+    ],
+    thumbs: {
+        autoStart: true
+    },
+    image: {
+        preload: false
+    },
+    infobar: true
+});
+
 function animateScroll() {
-    $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function (event) {
-        // On-page links
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            // Figure out element to scroll to
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            // Does a scroll target exist?
-            if (target.length) {
-                // Only prevent default if animation is actually gonna happen
-                event.preventDefault();
-                $html.animate({
-                    scrollTop: target.offset().top
-                }, 1000, function () {
-                    // Callback after animation
-                    // Must change focus!
-                    var $target = $(target);
-                    $target.focus();
-                    if ($target.is(":focus")) { // Checking if the target was focused
-                        return false;
-                    } else {
-                        $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                        $target.focus(); // Set focus again
-                    }
-                });
-            }
+    $('body').scrollspy({
+        target: '#scrollspy-nav , #buttons-nav, .navbar-header',
+        offset: 10
+    });
+
+    $('.navbar-nav a, #seeTheMenuBtn, #bookATableBtn, .navbar-header a').click(function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+
+            var hash = this.hash;
+            console.log(hash);
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 600)
         }
+
     });
 }
 
-// When the user clicks on the button, scroll to the top of the document
+function validateForm() {
+    bookNowButton[0].disabled = true;
+    formInputsArray.on('keyup', function (e) {
+        var validate = true;
+        formInputsArray.each(function (index, item) {
+            if (item.value == '') {
+                validate = false;
+            }
+            var regex = new RegExp($(item).attr('data-patern'));
+            if (regex.test(item.value)) {
+                item.classList.remove('redBorder');
+                item.classList.add('yellowBorder');
+            } else {
+                item.classList.remove('yellowBorder');
+                item.classList.add('redBorder');
+                validate = false;
+            }
+        });
+        bookNowButton[0].disabled = !validate;
+    })
+}
+
+function fancyBoxImagesAnchorsLoading() {
+    for (var i = 0; i < fancyBoxHrefs.length; i++) {
+        fancyBoxHrefs[i].href = "img/fancyBox-big-img-" + i + ".jpg";
+    }
+}
+
+
+function fancyBoxImagesLoading() {
+    for (var i = 0; i < fancyBoxSrcs.length; i++) {
+        fancyBoxSrcs[i].src = "img/fancyBox-small-img-" + i + ".jpg";
+    }
+}
+
 function backToTopOnClick() {
-    $bttButton.on('click', function() {
+    $bttButton.on('click', function () {
         $html.animate({
-            scrollTop: $topOfThePage.offset().top
+            scrollTop: 0
         }, 1000);
     });
 }
 
+function menuItemValuesAddition() {
+    for (var i = 0; i < itemDescriptionArray.length; i++) {
+        itemDescriptionArray[i].textContent = itemDescriptionValueArray[i];
+    }
+}
 
 function onScroll() {
     var scrolled = document.body.scrollTop;
@@ -62,25 +133,25 @@ function onScroll() {
         }
     }
 
-    if (scrolled > 230 || scrolled > 230) {
+    if (scrolled > 230) {
         $bttButton.addClass('opacity-btn')
+        $bttButton.css('display', 'block');
     } else {
         $bttButton.removeClass('opacity-btn');
+        $bttButton.css('display', 'none');
     }
 }
-
-
-
-// na kraju eventove....
-// ready znaci da je dokument ucitaj i spreman za script
-
-
 
 window.addEventListener('load', function () {
     backToTopOnClick();
     animateScroll();
-});
+    menuItemValuesAddition();
+    fancyBoxImagesLoading();
+    fancyBoxImagesAnchorsLoading();
+    validateForm();
 
-window.addEventListener('scroll', function() {
+
+});
+window.addEventListener('scroll', function () {
     onScroll();
 });
