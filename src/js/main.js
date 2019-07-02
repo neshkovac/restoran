@@ -23,6 +23,7 @@ var itemDescriptionValueArray = ["Refreshing traditional cucumber and garlic yog
     "A Thai appetizer that’s downright delicious ", "The potatoes in this recipe take on the spicy flavours beautifully", "This filling soup is full of fibre, low fat and full of veg",
     "A crispy pie that you can adapt for your needs, add chicken or keep it veggie.", "Served with creamy mashed potatoes"
 ];
+var $collapseBtn = $('#navbarCollapseBtn');
 // about author variables and other.
 
 // end of about author variables and other.
@@ -119,28 +120,39 @@ function menuItemValuesAddition() {
 function onScroll() {
     var scrolled = document.body.scrollTop;
     /* Navbar JS */
-    if (window.matchMedia("(max-width: 1000px)").matches) {
-        if (scrolled >= 20) {
-            $navbar.addClass('navbar-bg-orange');
+    if (window.matchMedia("(min-width: 1200px)").matches) {
+        if (window.matchMedia("(max-width: 1000px)").matches) {
+            if (scrolled >= 20) {
+                $navbar.addClass('navbar-bg-orange');
+                $("#bs-example-navbar-collapse-1").removeClass('navbar-bg-orange');
+            } else {
+                $navbar.removeClass('navbar-bg-orange');
+            }
         } else {
-            $navbar.removeClass('navbar-bg-orange');
+            if (scrolled >= 200) {
+                $navbar.addClass('navbar-bg-orange');
+                $("#bs-example-navbar-collapse-1").removeClass('navbar-bg-orange');
+            } else {
+                $navbar.removeClass('navbar-bg-orange');
+            }
         }
-    } else {
-        if (scrolled >= 200) {
-            $navbar.addClass('navbar-bg-orange');
-        } else {
-            $navbar.removeClass('navbar-bg-orange');
-        }
-    }
 
-    if (scrolled > 230) {
-        $bttButton.addClass('opacity-btn')
-        $bttButton.css('display', 'block');
-    } else {
-        $bttButton.removeClass('opacity-btn');
-        $bttButton.css('display', 'none');
+        if (scrolled > 230) {
+            $bttButton.addClass('opacity-btn')
+            $bttButton.css('display', 'block');
+        } else {
+            $bttButton.removeClass('opacity-btn');
+            $bttButton.css('display', 'none');
+        }
     }
 }
+$collapseBtn.click(function () {
+    if (window.matchMedia("(max-width: 1024px)").matches) {
+        $("#bs-example-navbar-collapse-1").toggleClass('navbar-bg-orange');
+        $navbar.toggleClass('navbar-bg-orange');
+    }
+});
+
 
 window.addEventListener('load', function () {
     backToTopOnClick();

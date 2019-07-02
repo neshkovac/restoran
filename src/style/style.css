@@ -218,6 +218,8 @@ body {
 .section-with-navbar .navbar-collapse {
     font-family: 'Gentium Book Basic', serif;
     font-size: 21px;
+    box-shadow: none;
+    
 }
 
 .section-with-navbar .navbar-collapse li a {
@@ -604,13 +606,14 @@ li.social-networks:hover {
 a.navbar-brand {
     padding-bottom: 120px;
 }
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: #fff;
+}
 
 /* 																Responsive 										*/
 
 @media screen and (max-width: 480px) {
-    .navbar-fixed-top {
-        background-color: transparent;
-    }
+
 
 }
 
@@ -676,7 +679,7 @@ a.navbar-brand {
     }
 
     a.navbar-brand {
-        padding-bottom: 40px;
+        padding-bottom: 0;
     }
 
     .section-with-navbar h1.heading-ingredients {
@@ -688,7 +691,7 @@ a.navbar-brand {
     .navbar-brand {
         float: left;
         height: auto;
-        padding: 20px 15px;
+        padding: 10px 5px;
     }
 
     .navbar-collapse {
@@ -701,13 +704,8 @@ a.navbar-brand {
 
     .section-with-navbar .navbar-nav li {
         display: inline-block;
-        padding-top: 20px;
+        padding-top: 5px;
     }
-
-    .section-with-navbar .navbar-nav li:not(:nth-child(1)):not(:nth-child(4)):not(.social-links-navbar) {
-        padding-left: 10px;
-    }
-
     .section-with-navbar .navbar-nav li.social-links-navbar {
         padding-left: 25px;
     }
@@ -767,8 +765,8 @@ a.navbar-brand {
         max-width: 105px;
     }
 
-    a.navbar-brand {
-        padding-bottom: 60px;
+    a.navbar-brand{
+        padding-bottom: 0;
     }
     p.description-paragraph {
         width: 247px;
