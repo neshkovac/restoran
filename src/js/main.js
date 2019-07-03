@@ -120,7 +120,7 @@ function menuItemValuesAddition() {
 function onScroll() {
     var scrolled = document.body.scrollTop;
     /* Navbar JS */
-    if (window.matchMedia("(min-width: 1200px)").matches) {
+    if (window.matchMedia("(min-width: 768px)").matches) {
         if (window.matchMedia("(max-width: 1000px)").matches) {
             if (scrolled >= 20) {
                 $navbar.addClass('navbar-bg-orange');
