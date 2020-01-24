@@ -10,6 +10,8 @@
 	<!-- font-family: 'Yeseva One', cursive; -->
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+	<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
 	<link rel="stylesheet" type="text/css" href="style/main.css">
 	<meta name="twitter:card" content="summary">
@@ -26,6 +28,7 @@
 	<meta property="og:description" content="Pick your plate!" />
 	<title>Lambda</title>
 </head>
+
 
 <body data-spy="scroll" data-target="#scrollspy-nav">
 	<section id="home" class="section-with-navbar nav-padding-2">
@@ -45,7 +48,7 @@
 							alt="logo" /></a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse right" id="bs-example-navbar-collapse-1">
+				<div class="collapse navbar-collapse right test" id="bs-example-navbar-collapse-1">
 					<div id="scrollspy-nav" class="clearfix">
 						<ul class="nav navbar-nav text-right" itemscope itemtype="http://schema.org/BreadcrumbList">
 							<li class="navbar-links active" itemprop="itemListElement" itemscope
@@ -81,7 +84,7 @@
 							<li class="social-links-navbar"><a href="https://www.youtube.com" itemprop="url"
 									target="_blank"><img itemtype="thing" itemprop="image"
 										src="img/social-yt-orange.png" alt="youtube" /></a></li>
-							<li class="social-links-navbar"><a href="https://www.facebook.com" itemprop="url"
+							<li class="social-links-navbar"><a href="https://www.facebook.com/lazar.neskovic.393" itemprop="url"
 									target="_blank"><img itemtype="thing" itemprop="image"
 										src="img/social-facebook-orange.png" alt="facebook" /></a></li>
 						</ul>
@@ -560,49 +563,31 @@
 									<div class="row">
 										<div class="col-xs-12">
 											<div class="col-sm-4 col-sm-offset-4 col-lg-12 col-lg-offset-0">
-												<div class="form-group row">
-													<label class="col-sm-12 col-md-12 col-form-label text-center"
-														for="name">Name</label>
-													<div class="col-sm-12 col-md-12">
-														<input type="text" placeholder="Capital 1st*" id="name"
-															class="form-control reset-margin" data-patern="[A-Z]\w+$">
-
-													</div>
+												<div class="mdc-text-field mdc-text-field" data-mdc-auto-init="MDCTextField">
+													<input type="text" class="mdc-text-field__input" id="name" aria-controls="my-text-field-helper-text">
+													<label for="full-func-text-field" class="mdc-floating-label" data-patern="[A-Z]\w+$">Name</label>
+													
 												</div>
 											</div>
 											<div class="col-sm-4 col-sm-offset-4 col-lg-offset-0 col-lg-12">
-												<div class="form-group row">
-													<label for="email"
-														class="col-sm-12 col-md-12 col-form-label text-center">Email</label>
-													<div class="col-sm-12 col-md-12">
-														<input type="text" class="form-control" id="email"
-															placeholder="@.com*" data-patern="\w(\w|\d)+\@\w+\.com">
-
-													</div>
+												<div class="mdc-text-field mdc-text-field" data-mdc-auto-init="MDCTextField">
+													<input type="text" class="mdc-text-field__input" id="email" aria-controls="my-text-field-helper-text">
+													<label for="full-func-text-field" class="mdc-floating-label" data-patern="\w(\w|\d)+\@\w+\.com">Email</label>
+													
 												</div>
 											</div>
 											<div class="col-sm-4 col-sm-offset-4 col-lg-offset-0 col-lg-12">
-												<div class="form-group row">
-													<label class="col-sm-12 col-md-12 col-form-label text-center"
-														for="date">Date</label>
-													<div class="col-sm-12 col-md-12">
-														<input type="text" placeholder="DD/MM/YYYY" id="date"
-															class="form-control" data-patern="([0-9]{2}\/){2}[0-9]{4}">
-
-													</div>
+												<div class="mdc-text-field mdc-text-field" data-mdc-auto-init="MDCTextField">
+													<input type="text" class="mdc-text-field__input" id="date" aria-controls="my-text-field-helper-text">
+													<label for="full-func-text-field" class="mdc-floating-label" data-patern="([0-9]{2}\/){2}[0-9]{4}">Date</label>
+													
 												</div>
 											</div>
 											<div class="col-sm-4 col-sm-offset-4 col-lg-offset-0 col-lg-12">
-												<div class="form-group row">
-													<label for="partyNumber"
-														class="col-sm-12 col-md-12 col-form-label text-center">Party
-														number</label>
-													<div class="col-sm-12 col-md-12">
-														<input type="text" class="form-control" id="partyNumber"
-															placeholder="*A20" data-patern="[A-Z]\d{2}">
-
-													</div>
-												</div>
+												<div class="mdc-text-field mdc-text-field" data-mdc-auto-init="MDCTextField">
+													<input type="text" class="mdc-text-field__input" id="partyNumber">
+													<label for="full-func-text-field" class="mdc-floating-label">Party</label>
+												
 											</div>
 										</div>
 									</div>
@@ -671,7 +656,7 @@
 								itemprop="streetAddress">128
 								Paradise Meserole Avenue</span></strong></p>
 					<ul class="footer-social">
-						<li class="social-networks"><a itemprop="url" href="https://www.facebook.com"
+						<li class="social-networks"><a itemprop="url" href="https://www.facebook.com/lazar.neskovic.393"
 								target="_blank"><img src="img/social-facebook.png" alt=""
 									class="social-networks-img"></a></li>
 						<li class="social-networks"><a itemprop="url" href="https://www.twitter.com"
@@ -692,5 +677,6 @@
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+	<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 	<script src="js/main-bundle.js"></script>
 </body>

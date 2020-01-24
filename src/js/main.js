@@ -16,7 +16,7 @@ var fancyBoxSrcs = document.getElementsByClassName('fancyBoxGallery');
 var fancyBoxHrefs = document.getElementsByClassName('fancyBoxAnchor');
 var itemDescriptionArray = document.getElementsByClassName('item-description');
 var fancyBoxRow = document.querySelector('#fancyBoxRow');
-var formInputsArray = $('.form-control');
+var formInputsArray = $('.mdc-text-field__input');
 var itemDescriptionValueArray = ["Refreshing traditional cucumber and garlic yoghurt dip.", "Pureed eggplant, garlic, green pepper and tomato dip.",
     "Panzenella is a Tuscan bread salad, ideal for the summer months.", "The perfect summer salad of melon, olives and feta cheese with toasted pumpkin seeds.",
     "The good old potato salad with a twist!", "A quick carrot salad with a freshly made black grape dressing", "Bite-sized and absolutely divine, serve these crisp potato and channa dal ki tikkis.",
@@ -161,6 +161,8 @@ window.addEventListener('load', function () {
     fancyBoxImagesLoading();
     fancyBoxImagesAnchorsLoading();
     validateForm();
+    mdc.autoInit();
+    console.log(formInputsArray);   
 
 
 });
