@@ -505,15 +505,24 @@ h5.item-description {
 .section-form label:hover {
     cursor: pointer;
 }
-
-.section-form input[type=text]:focus {
-    outline-color: #c89f2d;
-}
-
 .section-form h2.heading-orange-3 {
     padding-top: 50px;
 }
-
+.mdc-text-field__input{
+    background-color: #fff;
+}
+.mdc-text-field__input:focus{
+    background-color: #c90;
+}
+.mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mdc-text-field__input:focus {
+    border-bottom-color: #fff;
+}
+.mdc-text-field .mdc-text-field__input{
+    caret-color: #fff;
+}
+.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label{
+    color: #fff;
+}
 .section-form .form-row {
     padding-top: 29px;
 }
